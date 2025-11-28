@@ -13,15 +13,15 @@
   <!-- Шапка -->
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html" aria-current="page">
-      <picture class="logo__image">
-        <source srcset="images/logo-desktop-image.svg" media="(min-width: 1220px)" type="image/svg">
-        <source srcset="images/logo-tablet-image.svg" media="(min-width: 768px)" type="image/svg">
-        <img src="images/logo-mobile-image.svg" width="33" height="38" alt="Логотип">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop-image.svg" width="70" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet-image.svg" width="60" height="50" type="image/svg+xml">
+        <img class="logo__image" src="images/logo-mobile-image.svg" width="33" height="38" alt="Логотип">
       </picture>
-      <picture class="logo__text">
-        <source srcset="images/logo-desktop-text.svg" media="(min-width: 1220px)" type="image/svg">
-        <source srcset="images/logo-tablet-text.svg" media="(min-width: 768px)" type="image/svg">
-        <img src="/images/logo-mobile-text.svg" width="101" height="18" lang="en" alt="Cat energy">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop-text.svg" width="118" height="21" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet-text.svg" width="118" height="21" type="image/svg+xml">
+        <img class="logo__text" src="/images/logo-mobile-text.svg" width="101" height="18" lang="en" alt="Cat energy">
       </picture>
     </a>
     <nav class="main-header__nav main-nav">
@@ -30,14 +30,14 @@
       </button>
       <!-- Для открытия списка навигации заменить модификатор main-nav__list--closed на main-nav__list--opened -->
       <ul class="main-nav__list main-nav__list--closed">
-        <li class="main-nav__item main-nav__item--current">
-          <a href="#" aria-current="page">Главная</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Подбор программы</a>
+          <a class="main-nav__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -68,7 +68,7 @@
         <li class="programs__item programs__item--pro">
           <h3 class="programs__title box-title">Набор массы</h3>
           <p class="programs__description box-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs__link link-button" href="catalog.html#pro">Каталог Pro</a>
+          <a class="programs__link link-button" href="catalog.html">Каталог Pro</a>
         </li>
       </ul>
     </section>
@@ -138,7 +138,11 @@
           <span class="address__location-city">Санкт&#8209;Петербург</span>
         </p>
       </div>
-      <iframe class="address__map" src="#" width="320" height="362"></iframe>
+      <picture class="address__map">
+        <source srcset="images/map@1x.webp 1x, images/map@2x.webp 2x" type="image/webp">
+        <source srcset="images/map@1x.png 1x, images/map@2x.png 2x" type="image/png">
+        <img class="address__map-image" src="images/map-mobile@1x.png" width="320" height="362" alt="Магазин Cat energy на карте города">
+      </picture>
     </section>
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo" href="index.html" aria-current="page">
@@ -146,17 +150,17 @@
       </a>
       <ul class="main-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="#">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Vkontakte</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Youtube</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="#">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Telegram</span>
           </a>
         </li>

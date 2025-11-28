@@ -13,15 +13,15 @@
   <!-- Шапка -->
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
-      <picture class="logo__image">
-        <source srcset="images/logo-desktop-image.svg" media="(min-width: 1220px)" type="image/svg">
-        <source srcset="images/logo-tablet-image.svg" media="(min-width: 768px)" type="image/svg">
-        <img src="images/logo-mobile-image.svg" width="33" height="38" alt="Логотип">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop-image.svg" width="70" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet-image.svg" width="60" height="50" type="image/svg+xml">
+        <img class="logo__image" src="images/logo-mobile-image.svg" width="33" height="38" alt="Логотип">
       </picture>
-      <picture class="logo__text">
-        <source srcset="images/logo-desktop-text.svg" media="(min-width: 1220px)" type="image/svg">
-        <source srcset="images/logo-tablet-text.svg" media="(min-width: 768px)" type="image/svg">
-        <img src="/images/logo-mobile-text.svg" width="101" height="18" lang="en" alt="Cat energy">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop-text.svg" width="118" height="21" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet-text.svg" width="118" height="21" type="image/svg+xml">
+        <img class="logo__text" src="/images/logo-mobile-text.svg" width="101" height="18" lang="en" alt="Cat energy">
       </picture>
     </a>
     <nav class="main-header__nav main-nav">
@@ -31,13 +31,13 @@
       <!-- Для открытия списка навигации заменить модификатор .nav__list--closed на .nav__list--opened -->
       <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item main-nav__item--current">
-          <a href="#" aria-current="page">Каталог продукции</a>
+          <a class="main-nav__link" href="index.html" aria-current="page">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--current" href="#">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -54,10 +54,10 @@
             <h3 class="product__title">Cat Energy PRO 500&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/chicken-small@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/chicken-small@2x.png 2x" type="image/png">
-              <img src="image/chicken-small@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом курицы в стакане, вес 500 г">
+              <img class="product__image" src="image/chicken-small@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом курицы в стакане, вес 500 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -75,10 +75,10 @@
             <h3 class="product__title">Cat Energy PRO 1000&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/chicken-big@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/chicken-big@2x.png 2x" type="image/png">
-              <img src="image/chicken-big@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом курицы в стакане, вес 1000 г">
+              <img class="product__image" src="image/chicken-big@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом курицы в стакане, вес 1000 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -96,10 +96,10 @@
             <h3 class="product__title">Cat Energy PRO 500&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/fish-small@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/fish-small@2x.png 2x" type="image/png">
-              <img src="image/fish-small@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом рыбы в стакане, вес 500 г">
+              <img class="product__image" src="image/fish-small@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом рыбы в стакане, вес 500 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -117,10 +117,10 @@
             <h3 class="product__title">Cat Energy PRO 1000&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/fish-big@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/fish-big@2x.png 2x" type="image/png">
-              <img src="image/fish-big@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом рыбы в стакане, вес 1000 г">
+              <img class="product__image" src="image/fish-big@1x.png" width="140" height="107" alt="Продукция Cat Energy PRO со вкусом рыбы в стакане, вес 1000 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -135,13 +135,13 @@
         </li>
         <li class="main-catalog__item product">
           <a class="product__title-link" href="#" tabindex="-1">
-            <h3 class="product__title">Cat Energy SLIM 500&nbsp;г</h3>
+            <h3 class="product__title" id="slim">Cat Energy SLIM 500&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/buckwheat-small@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/buckwheat-small@2x.png 2x" type="image/png">
-              <img src="image/buckwheat-small@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом гречки в стакане, вес 500 г">
+              <img class="product__image" src="image/buckwheat-small@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом гречки в стакане, вес 500 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -159,10 +159,10 @@
             <h3 class="product__title">Cat Energy SLIM 1000&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/buckwheat-big@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/buckwheat-big@2x.png 2x" type="image/png">
-              <img src="image/buckwheat-big@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом гречки в стакане, вес 1000 г">
+              <img class="product__image" src="image/buckwheat-big@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом гречки в стакане, вес 1000 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -180,10 +180,10 @@
             <h3 class="product__title">Cat Energy SLIM 500&nbsp;г</h3>
           </a>
           <a class="product__image-link" href="product-page.html">
-            <picture class="product__image">
+            <picture>
               <source srcset="image/chicken-small@1x.webp 1x, image/rice-small@2x.webp 2x" type="image/webp">
               <source srcset="image/chicken-small@1x.png 1x, image/rice-small@2x.png 2x" type="image/png">
-              <img src="image/rice-small@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом риса в стакане, вес 500 г">
+              <img class="product__image" src="image/rice-small@1x.png" width="140" height="107" alt="Продукция Cat Energy SLIM со вкусом риса в стакане, вес 500 г">
             </picture>
           </a>
           <dl class="product__specification">
@@ -266,7 +266,11 @@
           <span class="address__location-city">Санкт&#8209;Петербург</span>
         </p>
       </div>
-      <iframe class="address__map" src="#" width="320" height="362"></iframe>
+      <picture class="address__map">
+        <source srcset="images/map@1x.webp 1x, images/map@2x.webp 2x" type="image/webp">
+        <source srcset="images/map@1x.png 1x, images/map@2x.png 2x" type="image/png">
+        <img class="address__map-image" src="images/map-mobile@1x.png" width="320" height="362" alt="Магазин Cat energy на карте города">
+      </picture>
     </section>
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo" href="index.html">
@@ -274,17 +278,17 @@
       </a>
       <ul class="main-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="#">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Vkontakte</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Youtube</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="#">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в социальную сеть Telegram</span>
           </a>
         </li>
