@@ -12,7 +12,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 660px minmax(calc(1280px - 720px), 1fr) 1fr;
     column-gap: 0;
-    background-image: linear-gradient(180deg, #ffffff 135px, #eaeaea 135px 100%);
+    background-image: linear-gradient(180deg, #ffffff 135px, #f2f2f2 135px 100%);
   }
 }
 
@@ -100,6 +100,10 @@
   margin: 20px auto 0;
   position: relative;
   width: max-content;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0 0 10px;
