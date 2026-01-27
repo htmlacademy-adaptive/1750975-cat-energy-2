@@ -1,0 +1,144 @@
+.main-nav {
+  @media (max-width: $mobile-width-only) {
+    background-color: $bg-color-primary;
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+
+    &--closed .main-nav__list {
+      display: none;
+    }
+
+    &--closed .main-nav__toggle {
+      background-image: url("../../icons/stack.svg#menu-burger");
+      background-size: 24px 24px;
+    }
+
+    &--opened .main-nav__list {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      background-color: $bg-color-primary;
+    }
+
+    &--opened .main-nav__toggle {
+      background-image: url("../../icons/stack.svg#menu-close");
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  @include bg-some-params($bg-color-primary);
+  background-image: url("../../icons/stack.svg#menu-close");
+  background-size: 20px 20px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+    flex-shrink: 0;
+
+    &--bg .main-nav__link {
+      color: $text-color-basis;
+    }
+
+    &--bg .main-nav__link--current::after {
+      background-color: $bg-color-primary;
+    }
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.main-nav__link {
+  @include link;
+  @include font-some-params($font-secondary, 20px, 20px);
+  padding: 22px 0;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible:not(.main-nav__link--current) {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--current {
+      padding-bottom: 0;
+      pointer-events: none;
+    }
+
+    &--current::after {
+      content: "";
+      display: block;
+      margin-top: 6px;
+      height: 2px;
+      background-color: $bg-color-basis;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

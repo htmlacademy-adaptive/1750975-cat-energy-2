@@ -1,0 +1,10 @@
+.box-title {
+  @include font-some-params($font-secondary, 24px, 37px);
+  color: $text-color-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

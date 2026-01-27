@@ -1,0 +1,39 @@
+.manual__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.manual__list {
+  @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 37px 144px;
+    justify-content: start;
+    counter-reset: item;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 80px;
+  }
+}
+
+.manual__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+  }
+}

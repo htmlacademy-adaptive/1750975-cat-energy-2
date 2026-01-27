@@ -1,0 +1,39 @@
+.section-subtitle {
+  @include font-some-params($font-secondary, 24px, 24px);
+  color: $text-color-secondary;
+  background-color: $bg-color-primary;
+  box-shadow: -40px 0 0 0 $bg-color-primary, 40px 0 0 0 $bg-color-primary;
+
+  &--short {
+    max-width: 190px;
+
+    @media (min-width: 400px) {
+      max-width: 100%;
+    }
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: $bg-color-basis;
+    box-shadow: 100vw 0 0 0 $bg-color-basis;
+    z-index: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    box-shadow: 0 0 0 0 $bg-color-primary, 40px 0 0 0 $bg-color-primary;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    box-shadow: -40px 0 0 0 $bg-color-primary, 40px 0 0 0 $bg-color-primary;
+  }
+}

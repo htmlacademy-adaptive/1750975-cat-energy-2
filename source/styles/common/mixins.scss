@@ -1,0 +1,55 @@
+@mixin font-face($family, $weight, $style, $src-woff2, $src-woff) {
+  @font-face {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src:
+      local($family),
+      $src-woff2 format("woff2"),
+      $src-woff format("woff");
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-some-params($family: $font-primary, $font-size: 14px, $line-height: 18px, $font-weight: inherit) {
+  font-family: $family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin bg-some-params($bg-color: $bg-color-basis, $bg-position: center, $bg-repeat: no-repeat) {
+  background-color: $bg-color;
+  background-position: $bg-position;
+  background-repeat: $bg-repeat;
+}
+
+@mixin button {
+  display: block;
+  color: $text-color-basis;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  background: $bg-color-basis;
+  cursor: pointer;
+}
+
+@mixin link {
+  color: $text-color-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@mixin center-flex($justify-content: center, $direction: row) {
+  justify-content: $justify-content;
+  align-items: center;
+  display: flex;
+  flex-direction: $direction;
+}

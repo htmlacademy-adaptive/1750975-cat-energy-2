@@ -1,0 +1,117 @@
+.program-box {
+  @include bg-some-params($bg-color-secondary, 20px 20px);
+
+  &--slim {
+    background-image: url("../../icons/stack.svg#cat-slim");
+    background-size: 50px 53px;
+  }
+
+  &--pro {
+    background-image: url("../../icons/stack.svg#cat-pro");
+    background-position: 12px 20px;
+    background-size: 67px 53px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    &--slim {
+      background-size: 200px 210px;
+      background-position: top 48% right 63px;
+    }
+
+    &--pro {
+      background-size: 270px 200px;
+      background-position: top 53% right 28px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--slim {
+      background-size: 100px 107px;
+      background-position: 52px 40px;
+    }
+
+    &--pro {
+      background-size: 134px 100px;
+      background-position: 33px 45px;
+    }
+  }
+}
+
+.program-box__title {
+  margin: 0;
+  margin-bottom: 28px;
+  padding-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    padding-top: 3px;
+    padding-left: 161px;
+  }
+}
+
+.program-box__description {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 23px;
+    border-bottom: 1px solid $border-color-darken;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+    max-width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    max-width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.program-box__link {
+  @include link;
+  @include font-some-params($font-secondary, 16px, 16px);
+  padding: 4px 0;
+  padding-right: 60px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
+  &::after {
+    @include bg-some-params(transparent, right);
+    content: "";
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: block;
+    width: 24px;
+    height: 12px;
+    background-image: url("../../icons/stack.svg#arrow-right");
+    background-size: 32px 12px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 450px;
+    column-gap: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

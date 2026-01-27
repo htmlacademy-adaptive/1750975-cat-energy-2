@@ -1,0 +1,72 @@
+.program-selection {
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+}
+
+.program-selection .section-subtitle {
+  @media (min-width: $tablet-width) {
+    box-shadow: -40px 0 0 0 $bg-color-primary, 40px 0 0 0 $bg-color-primary;
+  }
+}
+
+.program-selection__title {
+  margin: 0;
+  margin-bottom: 37px;
+  padding: 0 20px;
+  hyphens: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.program-selection__description {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  font-family: $font-secondary;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+  text-wrap: balance;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    padding: 0 40px;
+    max-width: 80vw;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    max-width: 340px;
+  }
+}
+
+.program-selection__form {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 69px 75px;
+    align-items: start;
+    grid-template-areas:
+      "cat          program"
+      "owner        owner"
+      "comment      comment"
+      "additionally additionally"
+      "button       note";
+  }
+}

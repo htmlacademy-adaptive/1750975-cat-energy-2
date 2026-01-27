@@ -1,0 +1,9 @@
+.section-title {
+  @include font-some-params($font-secondary, 36px, 36px);
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

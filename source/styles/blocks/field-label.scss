@@ -1,0 +1,16 @@
+.field-label {
+  @include font-some-params($font-secondary, 16px, 18px);
+  text-transform: uppercase;
+  flex-shrink: 0;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-color-secondary-lighter;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

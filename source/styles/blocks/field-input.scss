@@ -1,0 +1,44 @@
+.field-input {
+  @include font-some-params($font-secondary, 16px, 18px);
+  padding: 13px 15px;
+  color: inherit;
+  text-transform: uppercase;
+  border: 1px solid $border-color-basis;
+
+  &[type="text"],
+  &[type="number"] {
+    border-color: $border-color-lighter;
+  }
+
+  &[type="number"] {
+    appearance: textfield;    /* отключить стрелки в Firefox  */
+  }
+
+  /* отключить стрелки в других браузерах  */
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:hover {
+    border-color: $border-color-basis;
+  }
+
+  &:focus-visible,
+  &:focus {
+    outline: 2px solid #444444;
+    outline-offset: -2px;
+  }
+
+  &:user-invalid,
+  &--invalid {
+    outline: 2px solid $border-color-error;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

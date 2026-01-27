@@ -1,0 +1,65 @@
+.infographic {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    column-gap: 42px;
+  }
+}
+
+.infographic__item {
+  @include center-flex (center, column);
+  @include font-some-params($font-primary, 12px, 12px);
+  min-height: 56px;
+  gap: 9px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.infographic__number {
+  @include font-some-params($font-secondary, 24px, 24px);
+  padding: 14px;
+  width: 124px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+  hyphens: auto;
+  border: 1px solid $border-color-basis;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px;
+    width: 162px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.infographic__note {
+  margin: -17px auto 0;
+  padding: 0 15px;
+  width: min-content;
+  background-color: $bg-color-secondary-darken;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 8px;
+    width: 142px;
+    word-wrap: break-word;
+    background-color: $bg-color-primary;
+
+    &--short {
+      max-width: 115px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-color-secondary-darken;
+  }
+}

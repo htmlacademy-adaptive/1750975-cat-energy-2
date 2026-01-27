@@ -1,0 +1,69 @@
+.page__body {
+  @include font-some-params;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  font-weight: 400;
+  font-style: normal;
+  color: $text-color-primary;
+  background-color: $bg-color-primary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page__header {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    padding-top: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding-top: 55px;
+    width: 1280px;
+  }
+}
+
+.page__main {
+  flex-grow: 1;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.page__main.catalog {
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+    max-width: 1280px;
+  }
+}
+
+.page__main.program-selection {
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    max-width: 1280px;
+  }
+}

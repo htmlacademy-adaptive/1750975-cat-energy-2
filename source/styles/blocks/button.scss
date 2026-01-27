@@ -1,0 +1,27 @@
+.button {
+  @include font-some-params($font-secondary, 16px, 20px);
+  @include button;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $bg-color-basis-hover;
+  }
+
+  &:active {
+    color: rgb(255, 255, 255, 0.3);
+  }
+
+  &--secondary {
+    color: $text-color-primary;
+    background: $bg-color-secondary;
+
+    &:hover {
+      background: $bg-color-secondary-hover;
+    }
+
+    &:active {
+      color: $text-color-primary;
+    }
+  }
+}

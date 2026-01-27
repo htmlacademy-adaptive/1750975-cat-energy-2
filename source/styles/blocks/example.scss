@@ -1,0 +1,107 @@
+.example {
+  background-color: $bg-color-secondary-darken;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 42px;
+    background-color: $bg-color-primary;
+    background-image: linear-gradient(0deg, #eaeaea 462px, #ffffff 462px 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 660px minmax(calc(1280px - 720px), 1fr) 1fr;
+    column-gap: 0;
+    background-image: linear-gradient(180deg, #ffffff 135px, #eaeaea 135px 100%);
+  }
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 145px;
+    grid-column: 2 / 3;
+  }
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    max-width: 440px;
+    grid-column: 2 / 3;
+  }
+}
+
+.example__infographic {
+  @include list-reset;
+  margin-bottom: 21px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+    grid-column: 2 / 3;
+  }
+}
+
+.example__expenses {
+  @include font-some-params($font-secondary, 14px, 20px);
+  margin: 0;
+  margin-bottom: 20px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 12px;
+    justify-self: end;
+    font-size: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    grid-column: 2 / 3;
+    justify-self: start;
+    text-align: start;
+  }
+}
+
+.example__sum {
+  font-weight: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+    display: block;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin: 0 0 0 63px;
+  }
+}
+
+.example__slider {
+  margin: 20px auto 0;
+  position: relative;
+  width: max-content;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 10px;
+  }
+}
